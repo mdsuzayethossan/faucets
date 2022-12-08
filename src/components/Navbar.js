@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Example from "./Dropdown";
 import Modal from "./Modal";
+import SelectBox from "./SelectBox";
 const Navbar = () => {
   const [userMenu, setUsermenu] = useState(false);
   const [modal, setModal] = useState(false);
+
   return (
     <nav className="border-2 border-[#eee]">
       {modal && (
@@ -62,15 +63,15 @@ const Navbar = () => {
           <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <button
               type="button"
-              class="rounded-[3px] border-2 mr-3 flex items-center text-gray py-[8px] px-[20px] cursor-pointer"
+              class="hidden border-2 mr-3 lg:flex items-center rounded border-[#d4cdcd] text-gray cursor-pointer"
             >
-              <Example />
+              <SelectBox />
             </button>
 
             <button
               type="button"
               onClick={() => setModal(!modal)}
-              class="rounded-[3px] border-2 flex items-center text-primary py-[9px] px-[20px] cursor-pointer"
+              class="rounded-[3px] border-2 hidden lg:flex items-center text-primary py-[9px] px-[20px] cursor-pointer"
             >
               <svg
                 stroke="currentColor"
@@ -146,36 +147,34 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div class="sm:hidden" id="mobile-menu">
-        <div class="space-y-1 px-2 pt-2 pb-3">
-          <a
-            href="#"
-            class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
-            aria-current="page"
+      <div class="lg:hidden" id="mobile-menu">
+        <div class="flex items-center px-2 pb-3 gap-3">
+          <button
+            type="button"
+            onClick={() => setModal(!modal)}
+            class="rounded-[3px] border-2 flex items-center text-primary py-[9px] px-[20px] cursor-pointer"
           >
-            Dashboard
-          </a>
-
-          <a
-            href="#"
-            class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+              className="mr-[5px]"
+            >
+              <path d="M95.5 104h320a87.73 87.73 0 0111.18.71 66 66 0 00-77.51-55.56L86 94.08h-.3a66 66 0 00-41.07 26.13A87.57 87.57 0 0195.5 104zm320 24h-320a64.07 64.07 0 00-64 64v192a64.07 64.07 0 0064 64h320a64.07 64.07 0 0064-64V192a64.07 64.07 0 00-64-64zM368 320a32 32 0 1132-32 32 32 0 01-32 32z"></path>
+              <path d="M32 259.5V160c0-21.67 12-58 53.65-65.87C121 87.5 156 87.5 156 87.5s23 16 4 16-18.5 24.5 0 24.5 0 23.5 0 23.5L85.5 236z"></path>
+            </svg>{" "}
+            <span className="font-semibold text-sm">Connect Wallet</span>
+          </button>
+          <button
+            type="button"
+            class="border-2 mr-3 lg:hidden items-center rounded border-[#d4cdcd] text-gray cursor-pointer"
           >
-            Team
-          </a>
-
-          <a
-            href="#"
-            class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          >
-            Projects
-          </a>
-
-          <a
-            href="#"
-            class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          >
-            Calendar
-          </a>
+            <SelectBox />
+          </button>
         </div>
       </div>
       {(modal && <Modal modal={modal} setModal={setModal} />) || ""}

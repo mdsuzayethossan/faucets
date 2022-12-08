@@ -63,9 +63,7 @@ export default function MyTab() {
               className={({ selected }) =>
                 classNames(
                   "rounded-lg py-2.5 px-2.5 text-sm font-semibold leading-5 text-primary",
-                  selected
-                    ? "bg-primary text-[#fff] shadow outline-0"
-                    : "text-white"
+                  selected ? "bg-primary text-[#fff] shadow outline-0" : ""
                 )
               }
             >

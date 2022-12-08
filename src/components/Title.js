@@ -6,7 +6,7 @@ const Title = () => {
       <h2 className="mb-5 text-[35px] font-semibold text-primary">
         Request testnet LINK
       </h2>
-      <p className="w-[680px] text-gray">
+      <p className="w-full md:w-[680px] text-gray">
         Get testnet LINK for an account on one of the supported blockchain
         testnets so you can create and test your own oracle and Chainlinked
         smart contract
