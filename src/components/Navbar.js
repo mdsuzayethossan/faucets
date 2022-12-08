@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import Example from "./Dropdown";
+import Modal from "./Modal";
 
 const Navbar = () => {
   const [userMenu, setUsermenu] = useState(false);
+  const [modal, setModal] = useState(false);
   return (
     <nav>
+      {modal && (
+        <div className="fixed top-0 bottom-0 right-0 left-0 bg-[rgba(0,0,0,0.5)]"></div>
+      )}
       <div>
         <div class="relative flex h-16 items-center justify-between">
           <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -61,8 +66,10 @@ const Navbar = () => {
             >
               <Example />
             </button>
+
             <button
               type="button"
+              onClick={() => setModal(!modal)}
               class="rounded-[3px] border-2 flex items-center text-primary py-[9px] px-[20px] cursor-pointer"
             >
               <svg
@@ -171,6 +178,7 @@ const Navbar = () => {
           </a>
         </div>
       </div>
+      {(modal && <Modal modal={modal} setModal={setModal} />) || ""}
     </nav>
   );
 };
