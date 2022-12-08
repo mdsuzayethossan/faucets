@@ -6,7 +6,7 @@ const Navbar = () => {
   const [userMenu, setUsermenu] = useState(false);
   const [modal, setModal] = useState(false);
   return (
-    <nav>
+    <nav className="border-2 border-[#eee]">
       {modal && (
         <div className="fixed top-0 bottom-0 right-0 left-0 bg-[rgba(0,0,0,0.5)]"></div>
       )}
@@ -132,7 +132,7 @@ const Navbar = () => {
                     Sign Up
                   </Link>
                   <Link
-                    to="faq"
+                    to="/faq"
                     class="block px-4 py-2 text-sm text-gray-700"
                     role="menuitem"
                     tabindex="-1"

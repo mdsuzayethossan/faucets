@@ -2,12 +2,12 @@ import React from "react";
 
 const Login = () => {
   return (
-    <div className="h-screen">
+    <div className="h-screen mt-[10%]">
       <div className="max-w-md shadow-md border border-[#eee] bg-white mx-auto p-5">
         <h2 className="text-3xl font-semibold text-center mb-5 text-primary">
           Login
         </h2>
-        <div className="w-full flex flex-col">
+        <form className="w-full flex flex-col">
           <label htmlFor="" className="font-semibold text-[13px] text-primary">
             Email
           </label>
@@ -16,7 +16,7 @@ const Login = () => {
             type="email"
             placeholder="Enter your Email"
           />
-        </div>
+        </form>
         <div className="w-full flex flex-col mt-3">
           <label htmlFor="" className="font-semibold text-[13px] text-primary">
             Password
