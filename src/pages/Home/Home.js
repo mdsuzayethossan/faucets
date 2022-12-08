@@ -9,9 +9,8 @@ import Footer from "../../components/Footer";
 const Home = () => {
   return (
     <>
+      <Notice />
       <div className="container">
-        <Navbar />
-        <Notice />
         <Title />
         <div className="bg-white py-[25px] px-5">
           <div className="p-[10px] flex items-center bg-[#eef2fe]">
@@ -31,7 +30,6 @@ const Home = () => {
           <RequestHistory />
         </div>
       </div>
-      <Footer />
     </>
   );
 };

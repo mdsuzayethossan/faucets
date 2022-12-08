@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Tab } from "@headlessui/react";
-import Table from "./Table";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");

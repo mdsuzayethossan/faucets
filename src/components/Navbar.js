@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Example from "./Dropdown";
 import Modal from "./Modal";
 
@@ -10,7 +11,7 @@ const Navbar = () => {
       {modal && (
         <div className="fixed top-0 bottom-0 right-0 left-0 bg-[rgba(0,0,0,0.5)]"></div>
       )}
-      <div>
+      <div className="container">
         <div class="relative flex h-16 items-center justify-between">
           <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <button
@@ -113,33 +114,33 @@ const Navbar = () => {
                   aria-labelledby="user-menu-button"
                   tabindex="-1"
                 >
-                  <a
-                    href="#"
+                  <Link
+                    to="/login"
                     class="block px-4 py-2 text-sm text-gray-700"
                     role="menuitem"
                     tabindex="-1"
                     id="user-menu-item-0"
                   >
-                    Your Profile
-                  </a>
-                  <a
-                    href="#"
+                    Log In
+                  </Link>
+                  <Link
+                    to="/signup"
                     class="block px-4 py-2 text-sm text-gray-700"
                     role="menuitem"
                     tabindex="-1"
                     id="user-menu-item-1"
                   >
-                    Settings
-                  </a>
-                  <a
-                    href="#"
+                    Sign Up
+                  </Link>
+                  <Link
+                    to="faq"
                     class="block px-4 py-2 text-sm text-gray-700"
                     role="menuitem"
                     tabindex="-1"
                     id="user-menu-item-2"
                   >
-                    Sign out
-                  </a>
+                    FAQ
+                  </Link>
                 </div>
               )}
             </div>
