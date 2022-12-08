@@ -1,11 +1,9 @@
 import React from "react";
 import Form from "../../components/Form";
-import Navbar from "../../components/Navbar";
 import Notice from "../../components/Notice";
 import Title from "../../components/Title";
 import { ExclamationTriangleIcon } from "@heroicons/react/20/solid";
 import RequestHistory from "../../components/RequestHistory";
-import Footer from "../../components/Footer";
 const Home = () => {
   return (
     <>
