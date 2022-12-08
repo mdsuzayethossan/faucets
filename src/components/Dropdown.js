@@ -3,6 +3,8 @@ import { Fragment } from "react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import icon1 from "../assets/arbitrum.79164059.svg";
 import icon2 from "../assets/avalanche.234db155.svg";
+import icon3 from "../assets/bsc.d8c61230.svg";
+import icon4 from "../assets/ethereum.42dac5dc.svg";
 
 export default function Example() {
   return (
@@ -57,6 +59,38 @@ export default function Example() {
                       alt=""
                     />
                     Avalanche Fuji
+                  </button>
+                )}
+              </Menu.Item>
+              <Menu.Item>
+                {({ active }) => (
+                  <button
+                    className={`${
+                      active ? "bg-[#eef2fe]" : "text-gray-900"
+                    } group flex w-full items-center rounded-md px-3 py-2 text-sm`}
+                  >
+                    <img
+                      className="w-[15px] h-[15px] mr-[10px]"
+                      src={icon3}
+                      alt=""
+                    />
+                    BNB Chain Testnet
+                  </button>
+                )}
+              </Menu.Item>
+              <Menu.Item>
+                {({ active }) => (
+                  <button
+                    className={`${
+                      active ? "bg-[#eef2fe]" : "text-gray-900"
+                    } group flex w-full items-center rounded-md px-3 py-2 text-sm`}
+                  >
+                    <img
+                      className="w-[15px] h-[15px] mr-[10px]"
+                      src={icon4}
+                      alt=""
+                    />
+                    Ethereum Rinkeby
                   </button>
                 )}
               </Menu.Item>
