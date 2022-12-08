@@ -37,37 +37,15 @@ const Table = () => {
               </thead>
               <tbody>
                 <tr class="border">
-                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                    1
-                  </td>
-                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                  <td class="px-6 py-4  text-sm font-medium">1</td>
+                  <td class="text-sm text-gray-900 font-light px-6 py-4">
                     Mark
                   </td>
-                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                  <td class="text-sm text-gray-900 font-light px-6 py-4">
                     Otto
                   </td>
-                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                  <td class="text-sm text-gray-900 font-light px-6 py-4">
                     @mdo
-                  </td>
-                </tr>
-                <tr class="border">
-                  <td class="px-6 py-4 text-sm font-medium">2</td>
-                  <td class="text-sm font-light px-6 py-4">Jacob</td>
-                  <td class="text-sm font-light px-6 py-4">Thornton</td>
-                  <td class="text-sm font-light px-6 py-4">@fat</td>
-                </tr>
-                <tr class="">
-                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                    5
-                  </td>
-                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                    Ted
-                  </td>
-                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                    Obama
-                  </td>
-                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                    @fat
                   </td>
                 </tr>
               </tbody>
