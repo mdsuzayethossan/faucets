@@ -1,52 +1,38 @@
 import React from "react";
 
 const Table = () => {
+  const thStyle =
+    "text-sm font-semibold p-2 min-w-[80px] border border-[#eee] text-center";
+  const tdStyle =
+    "text-sm font-medium p-2 min-w-[80px] border border-[#eee] text-center";
   return (
     <div class="flex flex-col">
       <div class="overflow-x-hidden">
-        <div class="py-2 inline-block min-w-full">
-          <div class="overflow-hidden">
-            <table class="min-w-full border">
-              <thead class="bg-gray-200 border-b">
+        <div>
+          <div>
+            <table>
+              <thead>
                 <tr>
-                  <th
-                    scope="col"
-                    class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
-                  >
+                  <th scope="col" class={thStyle}>
                     #
                   </th>
-                  <th
-                    scope="col"
-                    class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
-                  >
+                  <th scope="col" class={thStyle}>
                     First
                   </th>
-                  <th
-                    scope="col"
-                    class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
-                  >
+                  <th scope="col" class={thStyle}>
                     Last
                   </th>
-                  <th
-                    scope="col"
-                    class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
-                  >
+                  <th scope="col" class={thStyle}>
                     Handle
                   </th>
                 </tr>
               </thead>
               <tbody>
-                <tr class="border">
-                  <td class="px-6 py-4  text-sm font-medium">1</td>
-                  <td class="text-sm text-gray-900 font-light px-6 py-4">
-                    Mark
-                  </td>
-                  <td class="text-sm text-gray-900 font-light px-6 py-4">
-                    Otto
-                  </td>
-                  <td class="text-sm text-gray-900 font-light px-6 py-4">
-                    @mdo
-                  </td>
+                <tr>
+                  <td class={tdStyle}>1</td>
+                  <td class={tdStyle}>Mark</td>
+                  <td class={tdStyle}>Otto</td>
+                  <td class={tdStyle}>@mdo</td>
                 </tr>
               </tbody>
             </table>
