@@ -1,6 +1,8 @@
 import { Dialog, Transition } from "@headlessui/react";
+import { XCircleIcon } from "@heroicons/react/20/solid";
 import { Fragment, useState } from "react";
-
+import img1 from "../assets/MetaMask.551edf10.svg";
+import img2 from "../assets/WalletConnect.d0b10794.svg";
 export default function MyModal({ modal, setModal }) {
   let [isOpen, setIsOpen] = useState(modal);
 
@@ -34,28 +36,37 @@ export default function MyModal({ modal, setModal }) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                  <Dialog.Title
-                    as="h3"
-                    className="text-lg font-medium leading-6 text-gray-900"
-                  >
-                    Payment successful
-                  </Dialog.Title>
-                  <div className="mt-2">
-                    <p className="text-sm text-gray-500">
-                      Your payment has been successfully submitted. We’ve sent
-                      you an email with all of the details of your order.
-                    </p>
-                  </div>
-
-                  <div className="mt-4">
-                    <button
-                      type="button"
-                      className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                <Dialog.Panel className="w-[450px] transform overflow-hidden rounded bg-white p-[25px] text-left align-middle shadow-xl transition-all border border-[#eee] h-auto">
+                  <div className="text-right flex justify-between items-center">
+                    <h2 className="text-[25px] font-semibold text-black">
+                      Connect your wallet
+                    </h2>
+                    <XCircleIcon
+                      className="w-7 cursor-pointer"
                       onClick={closeModal}
-                    >
-                      Got it, thanks!
-                    </button>
+                    />
+                  </div>
+                  <div className="mt-5 flex items-center justify-center">
+                    <div className="p-5 m-[10px] bg-[#f5f7fd] text-center w-1/2 cursor-pointer">
+                      <img
+                        src={img1}
+                        alt=""
+                        className="w-[100px] h-[100px] mx-auto"
+                      />
+                      <h3 className="font-semibold text-lg text-primary">
+                        MetaMask
+                      </h3>
+                    </div>
+                    <div className="p-5 m-[10px] bg-[#f5f7fd] text-center w-1/2 cursor-pointer">
+                      <img
+                        src={img2}
+                        alt=""
+                        className="w-[100px] h-[100px] mx-auto"
+                      />
+                      <h3 className="font-semibold text-lg text-primary">
+                        WalletConnect
+                      </h3>
+                    </div>
                   </div>
                 </Dialog.Panel>
               </Transition.Child>
