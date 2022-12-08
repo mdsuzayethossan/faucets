@@ -4,9 +4,42 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import icon1 from "../assets/arbitrum.79164059.svg";
 import icon2 from "../assets/avalanche.234db155.svg";
 import icon3 from "../assets/bsc.d8c61230.svg";
-import icon4 from "../assets/ethereum.42dac5dc.svg";
+import icon5 from "../assets/fantom.3f8c71bb.svg";
+import icon6 from "../assets/harmony.02c2e3ba.svg";
+import icon7 from "../assets/MetaMask.551edf10.svg";
+import icon8 from "../assets/poa.90512ab9.svg";
 
 export default function Example() {
+  const dropdownContent = [
+    {
+      name: "Arbitrum Rinkeby",
+      img: icon1,
+    },
+    {
+      name: "Avalanche Fuji",
+      img: icon2,
+    },
+    {
+      name: "BNB Chain Testnet",
+      img: icon3,
+    },
+    {
+      name: "Fantom Testnet",
+      img: icon5,
+    },
+    {
+      name: "Harmony Testnet",
+      img: icon6,
+    },
+    {
+      name: "POA Network Sokol",
+      img: icon7,
+    },
+    {
+      name: "Polygon Mumbai",
+      img: icon8,
+    },
+  ];
   return (
     <div className="">
       <Menu as="div" className="relative inline-block text-left">
@@ -30,70 +63,24 @@ export default function Example() {
         >
           <Menu.Items className="absolute -right-6 mt-5 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white border-1 border-[#eee] shadow-lg">
             <div className="px-3 py-3 ">
-              <Menu.Item>
-                {({ active }) => (
-                  <button
-                    className={`${
-                      active ? "bg-[#eef2fe]" : "text-gray-900"
-                    } group flex w-full items-center rounded-md px-3 py-2 text-sm`}
-                  >
-                    <img
-                      className="w-[15px] h-[15px] mr-[10px]"
-                      src={icon1}
-                      alt=""
-                    />
-                    Arbitrum Rinkeby
-                  </button>
-                )}
-              </Menu.Item>
-              <Menu.Item>
-                {({ active }) => (
-                  <button
-                    className={`${
-                      active ? "bg-[#eef2fe]" : "text-gray-900"
-                    } group flex w-full items-center rounded-md px-3 py-2 text-sm`}
-                  >
-                    <img
-                      className="w-[15px] h-[15px] mr-[10px]"
-                      src={icon2}
-                      alt=""
-                    />
-                    Avalanche Fuji
-                  </button>
-                )}
-              </Menu.Item>
-              <Menu.Item>
-                {({ active }) => (
-                  <button
-                    className={`${
-                      active ? "bg-[#eef2fe]" : "text-gray-900"
-                    } group flex w-full items-center rounded-md px-3 py-2 text-sm`}
-                  >
-                    <img
-                      className="w-[15px] h-[15px] mr-[10px]"
-                      src={icon3}
-                      alt=""
-                    />
-                    BNB Chain Testnet
-                  </button>
-                )}
-              </Menu.Item>
-              <Menu.Item>
-                {({ active }) => (
-                  <button
-                    className={`${
-                      active ? "bg-[#eef2fe]" : "text-gray-900"
-                    } group flex w-full items-center rounded-md px-3 py-2 text-sm`}
-                  >
-                    <img
-                      className="w-[15px] h-[15px] mr-[10px]"
-                      src={icon4}
-                      alt=""
-                    />
-                    Ethereum Rinkeby
-                  </button>
-                )}
-              </Menu.Item>
+              {dropdownContent.map((item) => (
+                <Menu.Item>
+                  {({ active }) => (
+                    <button
+                      className={`${
+                        active ? "bg-[#eef2fe]" : "text-gray-900"
+                      } group flex w-full items-center rounded-md px-3 py-2 text-sm`}
+                    >
+                      <img
+                        className="w-[15px] h-[15px] mr-[10px]"
+                        src={item.img}
+                        alt=""
+                      />
+                      {item.name}
+                    </button>
+                  )}
+                </Menu.Item>
+              ))}
             </div>
           </Menu.Items>
         </Transition>

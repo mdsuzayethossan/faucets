@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Example from "./Dropdown";
 import Modal from "./Modal";
-
 const Navbar = () => {
   const [userMenu, setUsermenu] = useState(false);
   const [modal, setModal] = useState(false);
