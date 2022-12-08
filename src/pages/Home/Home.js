@@ -5,30 +5,34 @@ import Notice from "../../components/Notice";
 import Title from "../../components/Title";
 import { ExclamationTriangleIcon } from "@heroicons/react/20/solid";
 import RequestHistory from "../../components/RequestHistory";
+import Footer from "../../components/Footer";
 const Home = () => {
   return (
-    <div className="container">
-      <Navbar />
-      <Notice />
-      <Title />
-      <div className="bg-white py-[25px] px-5">
-        <div className="p-[10px] flex items-center bg-[#eef2fe]">
-          <ExclamationTriangleIcon
-            className="text-primary mr-3"
-            width="1em"
-            height="1em"
-          />
-          <p className="text-black">
-            Your wallet is connected to{" "}
-            <span className="font-bold">Ethereum Kovan</span>, so you are
-            requesting <span className="font-bold">Ethereum Kovan</span>{" "}
-            Link/ETH.
-          </p>
+    <>
+      <div className="container">
+        <Navbar />
+        <Notice />
+        <Title />
+        <div className="bg-white py-[25px] px-5">
+          <div className="p-[10px] flex items-center bg-[#eef2fe]">
+            <ExclamationTriangleIcon
+              className="text-primary mr-3"
+              width="1em"
+              height="1em"
+            />
+            <p className="text-black">
+              Your wallet is connected to{" "}
+              <span className="font-bold">Ethereum Kovan</span>, so you are
+              requesting <span className="font-bold">Ethereum Kovan</span>{" "}
+              Link/ETH.
+            </p>
+          </div>
+          <Form></Form>
+          <RequestHistory />
         </div>
-        <Form></Form>
-        <RequestHistory />
       </div>
-    </div>
+      <Footer />
+    </>
   );
 };
 
